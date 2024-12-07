@@ -1,6 +1,6 @@
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-find_package(Eigen3 3.4 REQUIRED)
+find_package(Eigen3 REQUIRED)
 find_package(SuiteSparse COMPONENTS CHOLMOD REQUIRED)
 find_package(Ceres REQUIRED COMPONENTS SuiteSparse)
 find_package(Boost REQUIRED)
@@ -36,8 +36,8 @@ endif()
 message(STATUS "Configuring PoseLib... done")
 
 FetchContent_Declare(COLMAP
-    GIT_REPOSITORY    https://github.com/colmap/colmap.git
-    GIT_TAG           78f1eefacae542d753c2e4f6a26771a0d976227d
+    GIT_REPOSITORY    https://github.com/anchun/colmap.git
+    GIT_TAG           6166decf42c386470f11b6e222e4d0a3a4ccce65
     EXCLUDE_FROM_ALL
 )
 message(STATUS "Configuring COLMAP...")

@@ -32,7 +32,13 @@ cmake .. -GNinja
 ninja && ninja install
 ```
 Pre-compiled Windows binaries can be downloaded from the official
-[release page](https://github.com/colmap/glomap/releases).
+[release page](https://github.com/colmap/glomap/releases). or build for Windows from source:
+```shell
+mkdir build
+cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=<path_to_vcpkg>\scripts\buildsystems\vcpkg.cmake -DCMAKE_CUDA_ARCHITECTURES=all-major -DGUI_ENABLED=OFF -DCGAL_ENABLED=OFF
+open glomap.sln and build
+```
 
 After installation, one can run GLOMAP by (starting from a database)
 ```shell
