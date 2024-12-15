@@ -37,7 +37,7 @@ Pre-compiled Windows binaries can be downloaded from the official
 mkdir build
 cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=path/to/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_CUDA_ARCHITECTURES=all-major -DGUI_ENABLED=OFF -DCGAL_ENABLED=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo
-cmake --build . --config RelWithDebInfo --target glomap --parallel 8
+cmake --build . --config RelWithDebInfo --target glomap_main --parallel 8
 ```
 
 After installation, one can run GLOMAP by (starting from a database)
