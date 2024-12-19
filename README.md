@@ -23,13 +23,13 @@ If you use this project for your research, please cite
 
 ## Getting Started
 
-To build GLOMAP, first install [COLMAP](https://colmap.github.io/install.html#build-from-source)
+To build GLOMAP, first build colmap from source first.
 dependencies and then build GLOMAP using the following commands: 
 ```shell
 mkdir build
 cd build
-cmake .. -GNinja
-ninja && ninja install
+cmake .. -DFETCH_COLMAP=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=all-major
+make && make install
 ```
 Pre-compiled Windows binaries can be downloaded from the official
 [release page](https://github.com/colmap/glomap/releases). or build for Windows from source:

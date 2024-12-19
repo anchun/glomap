@@ -11,7 +11,7 @@ typedef std::pair<image_t, feature_t> Observation;
 
 struct Track {
   // The id of the track
-  track_t track_id;
+  track_t track_id = 0;
 
   // The 3D point of the track
   Eigen::Vector3d xyz = Eigen::Vector3d::Zero();
